@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+/* Custom CSS Reset
+based on Josh Comeau's CSS Reset: https://www.joshwcomeau.com/css/custom-css-reset/
+and Andy Bell's Modern CSS Reset: https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+/* -webkit... only for Safari and MacOS with retina display */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  block-size: auto;
+  max-inline-size: 100%;
+}
+
+/* makes sure to use same font-family, font-size and font-weight for all elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root {
+  --color-paper-plane: hsl(29, 33%, 92%);
+  --color-polar-bear: hsl(0, 0%, 100%);
+  --color-night-sky: hsl(212, 14%, 17%);
+  --color-volcanic-ash: hsl(225, 4%, 47%);
+  --color-turquoise-tortoise: hsl(153, 24%, 41%);
+  --color-zucchini: hsl(150, 28%, 20%);
+}
+
+body {
+  color: var(--color-volcanic-ash);
+  background-color: var(--color-paper-plane);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  padding-inline: 1rem;
+  padding-block: 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  max-inline-size: 45ch;
+  margin-inline: auto;
+}
+
+.product-img {
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--color-polar-bear);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1.5rem;
+}
+
+.overline {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+}
+
+.title {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--color-night-sky);
+  line-height: 1em;
+}
+
+.description {
+  line-height: 1.5em;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.price {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--color-turquoise-tortoise);
+}
+
+.old-price {
+  color: var(--color-volcanic-ash);
+  text-decoration: line-through;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
+  background-color: var(--color-turquoise-tortoise);
+  color: var(--color-polar-bear);
+  border: none;
+  inline-size: 100%;
+  border-radius: 0.5rem;
+  padding-inline: 1.5rem;
+  padding-block: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-zucchini);
+}
+
+@media screen and (min-width: 45em) {
+  .card-container {
+    flex-direction: row;
+    max-inline-size: 34rem;
+  }
+
+  .product-img {
+    border-radius: 1rem 0 0 1rem;
+    min-block-size: 100%;
+    max-inline-size: 17rem;
+  }
+
+  .product-info {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
