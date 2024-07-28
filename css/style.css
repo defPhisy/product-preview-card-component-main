@@ -83,18 +83,19 @@ body {
   font-size: 0.875rem;
   padding-inline: 1rem;
   padding-block: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .card-container {
   display: flex;
   flex-direction: column;
-  max-inline-size: 45ch;
+  max-inline-size: 21rem;
   margin-inline: auto;
 }
 
 .product-img {
   border-radius: 1rem 1rem 0 0;
-  object-fit: cover;
 }
 .product-info {
   display: flex;
@@ -162,7 +163,7 @@ body {
   background-color: var(--color-zucchini);
 }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 45rem) {
   .card-container {
     flex-direction: row;
     max-inline-size: 34rem;
@@ -170,7 +171,6 @@ body {
 
   .product-img {
     border-radius: 1rem 0 0 1rem;
-    min-block-size: 100%;
     max-inline-size: 17rem;
   }
 
